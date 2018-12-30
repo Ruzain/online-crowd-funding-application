@@ -5,13 +5,15 @@ const loginRouter = express.Router();
 
 //@test
 
-//URL /api/v1/auth/login
+
 loginRouter.post('/', (req, res, next) => {
+	//URL /api/v1/auth/login
     passport.authenticate('local', function(err, user, info) {
         
         
         
         if (err) {
+        	//return next (err);
             res.json(err);
             return next(err);
         }

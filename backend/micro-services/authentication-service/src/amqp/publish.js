@@ -11,8 +11,10 @@ const USER_SIGNUP = 'signup';
 //it publish message to Rabbitmq when client signup request is success
 let onSignup = (msg,cb) => {
 
-    amqp.connect('amqp://localhost', function(err, connection) {
+    amqp.connect('amqp://localhost', function(err, connection)
+
         if (err) {
+        //ech
             return cb (err);
         }
 
