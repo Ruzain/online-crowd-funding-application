@@ -141,3 +141,23 @@ describe("findByEmail() method", function() {
     })
   })
 });
+
+/*
+function User.findByEmail(user1,email) {
+  assert.isNull("Null");
+  assert.strictEqual(user.email , sha@gmail.com)
+  
+  
+  console.log('User -> findByEmail');
+  console.log('Expect sha@gmail.com ---->> ' + user.mail + '.');
+  
+  if ( sha@gmail.com === user.mail) 
+    return console.log('Passed.');
+  
+  console.log('Failed.');
+}
+
+User.findByEmail(user,email);
+
+*/
+
