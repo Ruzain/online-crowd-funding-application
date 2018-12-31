@@ -17,6 +17,28 @@ const stub = sinon.stub();
 // const spy = sinon.spy();
 const User = require("../../../db/models/User");
 
+
+/*
+new User({user_name: "sha", email: "sha@gmail.com", password_hash: "t1234", mobile_num: "0131554441"})
+function User.findByEmail(user1,email) {
+  assert.isNull("Null");
+  assert.strictEqual(user.email , sha@gmail.com)
+  
+  
+  console.log('User -> findByEmail');
+  console.log('Expect sha@gmail.com ---->> ' + user.mail + '.');
+  
+  if ( sha@gmail.com === user.mail) 
+    return console.log('Passed.');
+  
+  console.log('Failed.');
+}
+
+User.findByEmail(user,email);
+
+*/
+
+
 //Initializing mongodb connection
 //mongoose.connect('mongodb://localhost/authenction-service', { useNewUrlParser: true });
 require("../test-helper");
@@ -142,22 +164,5 @@ describe("findByEmail() method", function() {
   })
 });
 
-/*
-function User.findByEmail(user1,email) {
-  assert.isNull("Null");
-  assert.strictEqual(user.email , sha@gmail.com)
-  
-  
-  console.log('User -> findByEmail');
-  console.log('Expect sha@gmail.com ---->> ' + user.mail + '.');
-  
-  if ( sha@gmail.com === user.mail) 
-    return console.log('Passed.');
-  
-  console.log('Failed.');
-}
 
-User.findByEmail(user,email);
-
-*/
 
