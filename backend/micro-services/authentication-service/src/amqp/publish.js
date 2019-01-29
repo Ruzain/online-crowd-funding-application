@@ -1,3 +1,8 @@
+
+//1234566
+
+
+
 const amqp  = require('amqplib/callback_api');
 
 const USER_SIGNUP = 'signup';

@@ -3,6 +3,7 @@ const passport = require('passport');
 const { findByEmail }  = require('../services/user-service');
 const loginRouter = express.Router();
 
+//@test
 
 //URL /api/v1/auth/login
 loginRouter.post('/', (req, res, next) => {
