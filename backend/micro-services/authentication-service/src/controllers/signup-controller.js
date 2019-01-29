@@ -1,4 +1,4 @@
-//30012000123
+//30012000123ms
 
 const express = require('express')
 const signupRouter = express.Router();
@@ -7,11 +7,11 @@ const { createUser } = require('../services/user-service');
 const {onSignup } = require('../amqp/publish');
 
 
-//URL /api/v1/auth/signup
+
 signupRouter.post('/', (req, res) => {
+///URL /api/v1/auth/signup    
     
-    
-    if (!req.body.user)
+    if (!req.body.user) //return
     {
               
         res.status(401).send({message: "Error, body doesn't contain user"});

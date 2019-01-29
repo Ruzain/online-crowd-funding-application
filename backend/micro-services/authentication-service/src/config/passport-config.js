@@ -8,9 +8,11 @@ const User = require('../db/models/User');
 
 passport.use(new LocalStrategy(
     {usernameField: "email", passwordField: "password"},
+    
     function(email, password, done) {
 
     User.findByEmail(email, (err, user) => {
+        //if (err) return "error passport-config"
         if (err) return done(err);
 
         if(!user)
