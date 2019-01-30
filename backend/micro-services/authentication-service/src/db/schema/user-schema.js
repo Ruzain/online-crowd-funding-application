@@ -10,7 +10,8 @@ const UserSchema = mongoose.Schema({
   email: { type: String, required: true },
   password_hash: { type: String, required: true },
   verified: { type: Boolean, required: false },
-  mobile_num: { type: String, required: true }
+  mobile_num: { type: String, required: true },
+  //address: {type: String , required: false}
 });
 
 UserSchema.methods.validatePassword = function(password) {
@@ -52,6 +53,7 @@ UserSchema.statics.isUserNameExist = function (username, cb) {
     }
     
     if (users.length > 0) {
+      //return consol.log("error in isUserNameExist");
       return cb(null, true);
     }
 
